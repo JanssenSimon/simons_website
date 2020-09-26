@@ -17,6 +17,19 @@ body {
     padding: .5rem 0;
 }
 
+/*-- Dark Mode --*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        background: url(/images/beanstalk-dark/beanstalk-dark.png) repeat 0 0;
+        color: white;
+    }
+
+    .top-bar {
+        background: #010101;
+    }
+}
+
 /*-- Bootstrap Mobile Gutter Fix --*/
 .row, .container-fluid {
   margin-left: 0px !important;
