@@ -24,10 +24,18 @@
         </div>
 
         <!-- Entries -->
-        <p><?php
-            $entries = file_get_contents('./entries');
-            echo $entries;
-        ?></p>
+        <?php
+            //$entries = file_get_contents('./entries');
+            $entries = scandir('./entries/');
+            foreach ($entries as $entry) { ?>
+                <div class="card">
+                    <h2>Hello and welcome!</h2>
+                    <h5>This website's first entry, Sep 28, 2020</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>This is a placeholder for now..</p>
+                </div>
+            <?php }
+        ?>
         
         <div class="card">
             <h2>Hello and welcome!</h2>
