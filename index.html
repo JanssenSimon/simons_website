@@ -24,7 +24,11 @@
         </div>
 
         <!-- Entries -->
-        <?php ?>
+        <p><?php
+            $entries = file_get_contents('./entries');
+            echo $entries;
+        ?></p>
+        
         <div class="card">
             <h2>Hello and welcome!</h2>
             <h5>This website's first entry, Sep 28, 2020</h5>
