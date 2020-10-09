@@ -17,9 +17,13 @@ body {
 
 /*-- Entries --*/
 .card {
-  background-color: #F9F9F9;
-  padding: 2rem;
-  margin: 2rem 2rem 2rem 2rem;
+    background-color: #F9F9F9;
+    padding: 2rem;
+    margin: 2rem 2rem 2rem 2rem;
+}
+.card img {
+    align-self: center;
+    width: 100%;
 }
 
 /*-- Footer --*/
