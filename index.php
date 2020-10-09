@@ -33,14 +33,19 @@
                 if (strpos($entry, '.') === false) { 
 
                     // create array of contents of entries
-                    $contents = explode("\n\n",file_get_contents('./entries/'.$entry)); ?>
+                    $contents = explode("\n\n",file_get_contents('./entries/'.$entry)); 
+                    
+                    // turn entry name into a prettier date format 
+                    $date = new DateTime($entry);
+                    $date = $date->format('M j Y'); ?>
+
                     <div class="card">
                         <h2><?php echo $contents[0]; ?></h2>
-                        <h5><?php echo $contents[1]; ?>, <?php echo $entry; ?></h5>
+                        <h5><?php echo $contents[1]; ?>, <?php echo $date; ?></h5>
 
                         <?php // include image if one exists for entry
                         if (file_exists('./entries/'.$entry.'.jpg')) { ?>
-                            <img src="<?php echo './entries/'.$entry.'.jpg'; ?>" alt="image">
+                            <img src="<?php echo './entries/'.$entry.'.jpg'; ?>" width="auto" height="auto">
                         <?php } ?>
                         <p><?php echo $contents[2]; ?></p>
                     </div>
