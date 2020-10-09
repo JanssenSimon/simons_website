@@ -25,25 +25,29 @@
 
         <!-- Entries -->
         <?php
-            //$entries = file_get_contents('./entries');
+            // gets list of all entries in entrie/
             $entries = scandir('./entries/');
-            foreach ($entries as $entry) { ?>
-                <div class="card">
-                    <h2>Hello and welcome!</h2>
-                    <h5>This website's first entry, Sep 28, 2020</h5>
-                    <div class="fakeimg" style="height:200px;">Image</div>
-                    <p>This is a placeholder for now..</p>
-                </div>
-            <?php }
+            foreach ($entries as $entry) { 
+
+                // filter out entries with specific file extensions and ./ ../
+                if (strpos($entry, '.') === false) { 
+
+                    // create array of contents of entries
+                    $contents = explode("\n\n",file_get_contents('./entries/'.$entry)); ?>
+                    <div class="card">
+                        <h2><?php echo $contents[0]; ?></h2>
+                        <h5><?php echo $contents[1]; ?>, <?php echo $entry; ?></h5>
+
+                        <?php // include image if one exists for entry
+                        if (file_exists('./entries/'.$entry.'.jpg')) { ?>
+                            <img src="<?php echo './entries/'.$entry.'.jpg'; ?>" alt="image">
+                        <?php } ?>
+                        <p><?php echo $contents[2]; ?></p>
+                    </div>
+                <?php }
+            }
         ?>
         
-        <div class="card">
-            <h2>Hello and welcome!</h2>
-            <h5>This website's first entry, Sep 28, 2020</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>This is a placeholder for now..</p>
-        </div>
-
         <!-- Footer -->
         <footer>
             <div class="container">
