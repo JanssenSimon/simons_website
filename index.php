@@ -27,6 +27,7 @@
         <?php
             // gets list of all entries in entrie/
             $entries = scandir('./entries/');
+            $entries = array_reverse($entries);
             foreach ($entries as $entry) { 
 
                 // filter out entries with specific file extensions and ./ ../
