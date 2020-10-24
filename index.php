@@ -24,6 +24,7 @@
         </div>
 
         <!-- Entries -->
+        <div class="content">
         <?php
             // gets list of all entries in entrie/
             $entries = scandir('./entries/');
@@ -53,6 +54,7 @@
                 <?php }
             }
         ?>
+        </div>
         
         <!-- Footer -->
         <footer>
