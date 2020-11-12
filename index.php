@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -29,15 +29,15 @@
             // gets list of all entries in entrie/
             $entries = scandir('./entries/');
             $entries = array_reverse($entries);
-            foreach ($entries as $entry) { 
+            foreach ($entries as $entry) {
 
                 // filter out entries with specific file extensions and ./ ../
-                if (strpos($entry, '.') === false) { 
+                if (strpos($entry, '.') === false) {
 
                     // create array of contents of entries
-                    $contents = explode("\n\n",file_get_contents('./entries/'.$entry)); 
-                    
-                    // turn entry name into a prettier date format 
+                    $contents = explode("\n\n",file_get_contents('./entries/'.$entry));
+
+                    // turn entry name into a prettier date format
                     $date = new DateTime($entry);
                     $date = $date->format('M j Y'); ?>
 
@@ -55,7 +55,7 @@
             }
         ?>
         </div>
-        
+
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -77,4 +77,4 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
     </body>
-</html> 
+</html>
