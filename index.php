@@ -15,13 +15,13 @@
 
     <body>
         <!-- Top Bar -->
-        <div class="top-bar">
+        <header class="top-bar">
             <div class="container">
                 <div class="col-12 text-center">
                     <h1>Simon Janssen's Webpage</h1>
                 </div>
             </div>
-        </div>
+        </header>
 
         <!-- Entries -->
         <div class="content">
