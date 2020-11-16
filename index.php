@@ -9,8 +9,7 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="styles/style.css">
         <!-- Fonts -->
-        <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans" rel="stylesheet" type="text/css">
     </head>
 
     <body>
